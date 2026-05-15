@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/meditrack}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+meditrack:
+  jwt:
+    secret: ${JWT_SECRET:meditrack-dev-secret-key-change-in-production-min-256-bits}
+    expiration-ms: 86400000
+
+cors:
+  allowed-origins: ${CORS_ORIGINS:http://localhost:5173}
