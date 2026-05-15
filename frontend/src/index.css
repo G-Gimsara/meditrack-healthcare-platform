@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-medical-600 text-white text-sm font-medium rounded-lg
+           hover:bg-medical-700 transition-colors focus:outline-none focus:ring-2 focus:ring-medical-500 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200
+           hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-red-50 text-red-600 text-sm font-medium rounded-lg border border-red-100
+           hover:bg-red-100 transition-colors;
+  }
+
+  .input-field {
+    @apply w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-lg bg-white
+           focus:outline-none focus:ring-2 focus:ring-medical-500/30 focus:border-medical-500
+           placeholder:text-gray-400;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-card;
+  }
+
+  .page-heading {
+    @apply text-xl font-semibold text-gray-900;
+  }
+
+  .page-subtext {
+    @apply text-sm text-gray-500 mt-0.5;
+  }
+}
