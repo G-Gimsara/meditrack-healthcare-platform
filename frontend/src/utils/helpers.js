@@ -1,11 +1,11 @@
 export function formatDate(dateStr) {
-  if (!dateStr) return '—'
+  if (!dateStr) return '-'
   const d = new Date(dateStr + 'T00:00:00')
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 }
 
 export function formatTime(timeStr) {
-  if (!timeStr) return '—'
+  if (!timeStr) return '-'
   const [h, m] = timeStr.split(':')
   const hour = parseInt(h, 10)
   const ampm = hour >= 12 ? 'PM' : 'AM'
