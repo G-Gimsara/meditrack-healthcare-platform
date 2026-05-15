@@ -110,4 +110,4 @@ Change `JWT_SECRET` in production if you deploy this anywhere.
 
 ---
 
-MediTrack · 2025
+MediTrack, 2026
