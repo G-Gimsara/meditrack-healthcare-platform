@@ -11,7 +11,7 @@ export default function StatCard({ title, value, icon: Icon, trend, color = 'blu
       <div className="flex items-start justify-between">
         <div>
           <p className="text-sm text-gray-500 font-medium">{title}</p>
-          <p className="text-2xl font-semibold text-gray-900 mt-1">{value ?? '—'}</p>
+          <p className="text-2xl font-semibold text-gray-900 mt-1">{value ?? '-'}</p>
           {trend && <p className="text-xs text-gray-400 mt-1.5">{trend}</p>}
         </div>
         {Icon && (
