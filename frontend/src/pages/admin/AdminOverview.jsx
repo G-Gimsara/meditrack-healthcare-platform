@@ -87,7 +87,7 @@ export default function AdminOverview() {
                       <td className="px-4 py-3">{a.patientName}</td>
                       <td className="px-4 py-3 text-gray-600">{a.doctorName}</td>
                       <td className="px-4 py-3 text-gray-600">
-                        {formatDate(a.appointmentDate)} · {formatTime(a.appointmentTime)}
+                        {formatDate(a.appointmentDate)} at {formatTime(a.appointmentTime)}
                       </td>
                       <td className="px-4 py-3"><StatusBadge status={a.status} /></td>
                     </tr>

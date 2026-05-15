@@ -22,7 +22,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="w-full max-w-7xl 2xl:max-w-[1360px] mx-auto px-5 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <Activity className="text-medical-600" size={26} />
             <span className="font-semibold text-gray-900 text-lg">MediTrack</span>
@@ -40,17 +40,16 @@ export default function LandingPage() {
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-medical-50 via-white to-teal-50/40" />
-        <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div className="relative w-full max-w-7xl 2xl:max-w-[1360px] mx-auto px-5 sm:px-6 lg:px-8 py-14 md:py-20 lg:py-24 grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center">
           <div>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-medical-50 text-medical-700 text-xs font-medium border border-medical-100 mb-4">
               <Heart size={12} /> Healthcare Management System
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
               Manage hospital appointments without the paperwork.
             </h1>
-            <p className="mt-4 text-gray-600 text-base leading-relaxed max-w-lg">
-              MediTrack connects patients, doctors, and administrators on one platform —
-              book visits, track statuses, and keep records organized.
+            <p className="mt-4 text-gray-600 text-base lg:text-[1.05rem] leading-relaxed max-w-xl">
+              MediTrack connects patients, doctors, and administrators on one platform so you can book visits, track statuses, and keep records organized.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/register" className="btn-primary">
@@ -68,15 +67,15 @@ export default function LandingPage() {
           </div>
 
           {/* tried keeping this layout simple */}
-          <div className="relative hidden md:block">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-soft p-5 max-w-md ml-auto">
+          <div className="relative hidden lg:block w-full">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-soft p-6 w-full max-w-lg xl:max-w-none xl:ml-4">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-medical-100 flex items-center justify-center">
                   <Stethoscope size={18} className="text-medical-600" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-800">Dr. Rajesh Sharma</p>
-                  <p className="text-xs text-gray-500">Cardiology Â· Tomorrow 10:00 AM</p>
+                  <p className="text-xs text-gray-500">Cardiology, tomorrow 10:00 AM</p>
                 </div>
                 <span className="ml-auto text-xs font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-100">Pending</span>
               </div>
@@ -91,7 +90,7 @@ export default function LandingPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-800 truncate">{apt.name}</p>
-                      <p className="text-xs text-gray-500">{apt.dept} Â· {apt.time}</p>
+                      <p className="text-xs text-gray-500">{apt.dept}, {apt.time}</p>
                     </div>
                     <span className="text-xs text-gray-500">{apt.status}</span>
                   </div>
@@ -105,7 +104,7 @@ export default function LandingPage() {
       <section id="features" className="py-16 bg-gray-50/50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-semibold text-gray-900 text-center">What MediTrack offers</h2>
-          <p className="text-sm text-gray-500 text-center mt-2 mb-10">A full-stack practice project — covers the core hospital workflow</p>
+          <p className="text-sm text-gray-500 text-center mt-2 mb-10">A full-stack practice project that covers the core hospital workflow</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {features.map((f) => (
               <div key={f.title} className="card p-5 hover:shadow-soft transition-shadow">
@@ -156,7 +155,7 @@ export default function LandingPage() {
             <Activity size={18} className="text-medical-600" />
             <span>MediTrack © 2025</span>
           </div>
-          <p>Personal project — Hospital Management System</p>
+          <p>Personal project: Hospital Management System</p>
         </div>
       </footer>
     </div>

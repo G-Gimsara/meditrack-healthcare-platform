@@ -36,7 +36,7 @@ export default function DoctorAppointments() {
     {
       key: 'date',
       label: 'Date & Time',
-      render: (r) => `${formatDate(r.appointmentDate)} · ${formatTime(r.appointmentTime)}`,
+      render: (r) => `${formatDate(r.appointmentDate)} at ${formatTime(r.appointmentTime)}`,
     },
     { key: 'reason', label: 'Reason' },
     { key: 'status', label: 'Status', render: (r) => <StatusBadge status={r.status} /> },
@@ -79,7 +79,7 @@ export default function DoctorAppointments() {
         {selected && (
           <div className="space-y-4">
             <p className="text-sm text-gray-600">
-              Patient: <strong>{selected.patientName}</strong> — {formatDate(selected.appointmentDate)}
+              Patient: <strong>{selected.patientName}</strong> on {formatDate(selected.appointmentDate)}
             </p>
             <div>
               <label className="text-sm font-medium text-gray-700">Status</label>

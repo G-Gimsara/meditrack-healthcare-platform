@@ -24,7 +24,7 @@ export default function AdminAppointments() {
     {
       key: 'date',
       label: 'Date & Time',
-      render: (r) => `${formatDate(r.appointmentDate)} · ${formatTime(r.appointmentTime)}`,
+      render: (r) => `${formatDate(r.appointmentDate)} at ${formatTime(r.appointmentTime)}`,
     },
     { key: 'reason', label: 'Reason' },
     { key: 'status', label: 'Status', render: (r) => <StatusBadge status={r.status} /> },

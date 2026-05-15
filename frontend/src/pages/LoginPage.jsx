@@ -49,7 +49,7 @@ export default function LoginPage() {
         <div>
           <h1 className="text-3xl font-bold leading-tight">Hospital management,<br />made simpler.</h1>
           <p className="mt-4 text-medical-100 text-base max-w-md">
-            Book appointments, manage patient records, and coordinate care — all from one dashboard.
+            Book appointments, manage patient records, and coordinate care from one dashboard.
           </p>
         </div>
         <p className="text-sm text-medical-200">Full-stack upskilling project</p>

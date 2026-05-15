@@ -87,7 +87,7 @@ export default function BookAppointment() {
             <option value="">Choose a doctor...</option>
             {doctors.map((d) => (
               <option key={d.id} value={d.id}>
-                {d.fullName} — {d.specialization} ({d.departmentName})
+                {d.fullName}, {d.specialization} ({d.departmentName})
               </option>
             ))}
           </select>
@@ -96,7 +96,7 @@ export default function BookAppointment() {
         {selectedDoctor && (
           <div className="p-3 bg-medical-50 rounded-lg text-sm text-medical-800 border border-medical-100">
             <p className="font-medium">{selectedDoctor.fullName}</p>
-            <p className="text-xs mt-0.5 text-medical-600">{selectedDoctor.specialization} · {selectedDoctor.departmentName}</p>
+            <p className="text-xs mt-0.5 text-medical-600">{selectedDoctor.specialization}, {selectedDoctor.departmentName}</p>
           </div>
         )}
         <div className="grid grid-cols-2 gap-4">

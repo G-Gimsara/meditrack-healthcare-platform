@@ -32,7 +32,7 @@ export default function DoctorOverview() {
       <div className="mb-6">
         <h1 className="page-heading">Welcome, {user?.fullName?.replace('Dr. ', '') || 'Doctor'}</h1>
         <p className="page-subtext">
-          {profile?.specialization} · {profile?.departmentName || 'General'}
+          {profile?.specialization}, {profile?.departmentName || 'General'}
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -54,7 +54,7 @@ export default function DoctorOverview() {
                 <div>
                   <p className="text-sm font-medium text-gray-800">{a.patientName}</p>
                   <p className="text-xs text-gray-500 mt-0.5">
-                    {formatDate(a.appointmentDate)} · {formatTime(a.appointmentTime)} — {a.reason}
+                    {formatDate(a.appointmentDate)} at {formatTime(a.appointmentTime)}, {a.reason}
                   </p>
                 </div>
                 <StatusBadge status={a.status} />

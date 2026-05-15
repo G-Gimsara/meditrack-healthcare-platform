@@ -20,9 +20,9 @@ export default function AdminPatients() {
     { key: 'fullName', label: 'Name' },
     { key: 'email', label: 'Email' },
     { key: 'phone', label: 'Phone' },
-    { key: 'bloodGroup', label: 'Blood Group', render: (r) => r.bloodGroup || '—' },
+    { key: 'bloodGroup', label: 'Blood Group', render: (r) => r.bloodGroup || '-' },
     { key: 'dateOfBirth', label: 'DOB', render: (r) => formatDate(r.dateOfBirth) },
-    { key: 'address', label: 'Address', render: (r) => r.address || '—' },
+    { key: 'address', label: 'Address', render: (r) => r.address || '-' },
   ]
 
   if (loading) return <div className="flex justify-center py-20"><LoadingSpinner size="lg" /></div>

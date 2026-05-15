@@ -52,7 +52,7 @@ export default function PatientOverview() {
                 <div>
                   <p className="text-sm font-medium text-gray-800">{a.doctorName}</p>
                   <p className="text-xs text-gray-500 mt-0.5">
-                    {a.departmentName} · {formatDate(a.appointmentDate)} at {formatTime(a.appointmentTime)}
+                    {a.departmentName}, {formatDate(a.appointmentDate)} at {formatTime(a.appointmentTime)}
                   </p>
                 </div>
                 <StatusBadge status={a.status} />
